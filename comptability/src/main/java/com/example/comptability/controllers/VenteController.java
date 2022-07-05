@@ -39,7 +39,7 @@ public class VenteController {
     {
         try {
             Ventes ventes = venteRepository.findById(id).get();
-            model.addAttribute("recettes",ventes);
+            model.addAttribute("ventes",ventes);
             return "addvente";
         }catch (Exception e){
             return "redirect:/vente";

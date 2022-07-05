@@ -38,11 +38,11 @@ public class Depenses {
         this.refcaisse = refcaisse;
     }
 
-    public Date getDatedepense() {
+    public String getDatedepense() {
         return datedepense;
     }
 
-    public void setDatedepense(Date datedepense) {
+    public void setDatedepense(String datedepense) {
         this.datedepense = datedepense;
     }
 
@@ -64,7 +64,7 @@ public class Depenses {
     @Column(nullable = false, length = 300 , name = "refcaisse")
     private  String refcaisse;
     @Column(nullable = false, length = 300 , name = "datedepense")
-    private Date datedepense;
+    private String datedepense;
     @Column(nullable = false, length = 300 , name = "author")
     private String author;
 

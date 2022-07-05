@@ -6,9 +6,9 @@
     <title>Produits</title>
 
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../static/vendors/images/Logo.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/vendors/images/Logo.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/vendors/images/Logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/vendors/images/Logo.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/vendors/images/Logo.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/vendors/images/Logo.jpg">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,11 +16,11 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../vendors/styles/core.css">
-    <link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css">
-    <link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="../vendors/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/vendors/styles/core.css">
+    <link rel="stylesheet" type="text/css" href="/vendors/styles/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/plugins/datatables/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="/vendors/styles/style.css">
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">-->
 
     <script>
@@ -50,47 +50,7 @@
     </div>
 </div>
 
-<div class="header">
-    <div class="header-left">
-        <div class="menu-icon dw dw-menu"></div>
-        <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
-        <div class="header-search">
-            <form>
-                <div class="form-group mb-0">
-                    <i class="dw dw-search2 search-icon"></i>
-                    <input type="text" class="form-control search-input" placeholder="Search Here">
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="header-right">
-        <div class="dashboard-setting user-notification">
-            <div class="dropdown">
-                <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
-                    <i class="dw dw-settings2"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="user-info-dropdown">
-            <div class="dropdown">
-                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                            <span class="user-icon">
-                                <img src="../vendors/images/customer.png" alt="">
-                            </span>
-                    <!-- <span class="user-name"><?php echo($_SESSION['user_name']); ?></span> -->
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                    <a class="dropdown-item" href="#"><i class="dw dw-user1"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="dw dw-logout"></i> Log Out</a>
-                </div>
-            </div>
-        </div>
-        <div class="github-link">
-            <a href="#" target="_blank"><img src="../vendors/images/github.svg" alt=""></a>
-        </div>
-    </div>
-</div>
+<th th:include="header.html"></th>
 
 
 <div class="right-sidebar">
@@ -168,53 +128,8 @@
     </div>
 </div>
 
-<div class="left-side-bar">
-    <div class="brand-logo">
-        <a href="#">
-            <h3 class="text-white">Comptability Manager</h3>
-        </a>
-        <div class="close-sidebar" data-toggle="left-sidebar-close">
-            <i class="ion-close-round"></i>
-        </div>
-    </div>
-    <div class="menu-block customscroll">
-        <div class="sidebar-menu">
-            <div class="nav-lavel ">Navigation</div>
-            <ul id="accordion-menu">
-                <li>
-                    <a th:href="@{/}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-bar-chart-1"></span><span class="mtext">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/produit}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-library"></span><span class="mtext">Produits</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/vente}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-list3"></span><span class="mtext">Ventes</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/recette}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-shopping-cart"></span><span class="mtext">Recettes</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/depense}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-shopping-basket"></span><span class="mtext">Depenses</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-list"></span><span class="mtext">Rapports</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<th th:include="menu.html"></th>
+
 <div class="mobile-menu-overlay"></div>
 
 
@@ -239,6 +154,9 @@
                     <form th:action="@{/produit/create}" method="post" th:object="${produits}" class="form-horizontal col-md-12" autocomplete="off">
                         <div class="row">
                             <div class="col-md-12 mt-3">
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control" th:field="*{id}" name='id' id="id" />
+                                </div>
                                 <div class="form-group">
                                     <label>Designation</label>
                                     <input type="text" class="form-control" placeholder="Entré la designation" th:field="*{designation}" name='designation' id="designation" required />
@@ -272,23 +190,23 @@
     </div>
 </div>
 <!-- js -->
-<script src="../vendors/scripts/core.js"></script>
-<script src="../vendors/scripts/script.min.js"></script>
-<script src="../vendors/scripts/process.js"></script>
-<script src="../vendors/scripts/layout-settings.js"></script>
-<script src="../src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-<script src="../src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-<script src="../src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-<script src="../src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+<script src="/vendors/scripts/core.js"></script>
+<script src="/vendors/scripts/script.min.js"></script>
+<script src="/vendors/scripts/process.js"></script>
+<script src="/vendors/scripts/layout-settings.js"></script>
+<script src="/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+<script src="/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+<script src="/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
 <!-- buttons for Export datatable -->
-<script src="../src/plugins/datatables/js/dataTables.buttons.min.js"></script>
-<script src="../src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
-<script src="../src/plugins/datatables/js/buttons.print.min.js"></script>
-<script src="../src/plugins/datatables/js/buttons.html5.min.js"></script>
-<script src="../src/plugins/datatables/js/buttons.flash.min.js"></script>
-<script src="../src/plugins/datatables/js/pdfmake.min.js"></script>
-<script src="../src/plugins/datatables/js/vfs_fonts.js"></script>
+<script src="/src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+<script src="/src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+<script src="/src/plugins/datatables/js/buttons.print.min.js"></script>
+<script src="/src/plugins/datatables/js/buttons.html5.min.js"></script>
+<script src="/src/plugins/datatables/js/buttons.flash.min.js"></script>
+<script src="/src/plugins/datatables/js/pdfmake.min.js"></script>
+<script src="/src/plugins/datatables/js/vfs_fonts.js"></script>
 <!-- Datatable Setting js -->
-<script src="../vendors/scripts/datatable-setting.js"></script></body>
+<script src="/vendors/scripts/datatable-setting.js"></script></body>
 </body>
 </html>

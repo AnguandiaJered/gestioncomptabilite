@@ -245,10 +245,9 @@
                     <table class="data-table table stripe hover nowrap">
                         <thead>
                         <tr>
-                            <th class="table-plus datatable-nosort">#</th>
+<!--                            <th class="table-plus datatable-nosort">#</th>-->
                             <th>Montant</th>
                             <th>Motif</th>
-                            <th>Ventes</th>
                             <th>Caisse</th>
                             <th>Date Operation</th>
                             <th>Author</th>
@@ -258,7 +257,7 @@
                         <tbody>
                         <th:block th:each="dep : ${listdepense}">
                         <tr>
-                            <td class="table-plus">[[${dep.id}]]</td>
+<!--                            <td class="table-plus">[[${dep.id}]]</td>-->
                             <td>[[${dep.montant}]]</td>
                             <td>[[${dep.motif}]]</td>
                             <td>[[${dep.refcaisse}]]</td>
@@ -270,8 +269,8 @@
                                         <i class="dw dw-more"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                                        <a class="dropdown-item" th:href="${'/depense/edit/'+${dep.id}}"><i class="dw dw-edit2"></i> Edit</a>
-                                        <a class="dropdown-item" onclick= "return (confirm(' Voulez-vous supprimer vraiment cette information ?'));" th:href="${'/depense/delete/'+${dep.id}}"><i class="dw dw-delete-3"></i> Delete</a>
+                                        <a class="dropdown-item" th:href="@{'/depense/edit/'+${dep.id}}"><i class="dw dw-edit2"></i> Edit</a>
+                                        <a class="dropdown-item" onclick= "return (confirm(' Voulez-vous supprimer vraiment cette information ?'));" th:href="@{'/depense/delete/'+${dep.id}}"><i class="dw dw-delete-3"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>

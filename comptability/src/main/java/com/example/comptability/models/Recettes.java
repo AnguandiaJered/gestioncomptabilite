@@ -50,11 +50,11 @@ public class Recettes {
         this.refcaisse = refcaisse;
     }
 
-    public Date getDaterecette() {
+    public String getDaterecette() {
         return daterecette;
     }
 
-    public void setDaterecette(Date daterecette) {
+    public void setDaterecette(String daterecette) {
         this.daterecette = daterecette;
     }
 
@@ -74,7 +74,7 @@ public class Recettes {
     @Column(nullable = false, length = 300 , name = "refcaisse")
     private  String refcaisse;
     @Column(nullable = false, length = 300 , name = "daterecette")
-    private Date daterecette;
+    private String daterecette;
     @Column(nullable = false, length = 300 , name = "author")
     private String author;
 }

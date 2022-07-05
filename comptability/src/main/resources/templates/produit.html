@@ -50,47 +50,7 @@
     </div>
 </div>
 
-<div class="header">
-    <div class="header-left">
-        <div class="menu-icon dw dw-menu"></div>
-        <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
-        <div class="header-search">
-            <form>
-                <div class="form-group mb-0">
-                    <i class="dw dw-search2 search-icon"></i>
-                    <input type="text" class="form-control search-input" placeholder="Search Here">
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="header-right">
-        <div class="dashboard-setting user-notification">
-            <div class="dropdown">
-                <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
-                    <i class="dw dw-settings2"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="user-info-dropdown">
-            <div class="dropdown">
-                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                            <span class="user-icon">
-                                <img src="../vendors/images/customer.png" alt="">
-                            </span>
-                    <!-- <span class="user-name"><?php echo($_SESSION['user_name']); ?></span> -->
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                    <a class="dropdown-item" href="#"><i class="dw dw-user1"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="dw dw-logout"></i> Log Out</a>
-                </div>
-            </div>
-        </div>
-        <div class="github-link">
-            <a href="#" target="_blank"><img src="../vendors/images/github.svg" alt=""></a>
-        </div>
-    </div>
-</div>
+<!--header-->
 
 
 <div class="right-sidebar">
@@ -168,53 +128,8 @@
     </div>
 </div>
 
-<div class="left-side-bar">
-    <div class="brand-logo">
-        <a href="#">
-            <h3 class="text-white">Comptability Manager</h3>
-        </a>
-        <div class="close-sidebar" data-toggle="left-sidebar-close">
-            <i class="ion-close-round"></i>
-        </div>
-    </div>
-    <div class="menu-block customscroll">
-        <div class="sidebar-menu">
-            <div class="nav-lavel ">Navigation</div>
-            <ul id="accordion-menu">
-                <li>
-                    <a th:href="@{/}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-bar-chart-1"></span><span class="mtext">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/produit}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-library"></span><span class="mtext">Produits</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/vente}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-list3"></span><span class="mtext">Ventes</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/recette}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-shopping-cart"></span><span class="mtext">Recettes</span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{/depense}" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-shopping-basket"></span><span class="mtext">Depenses</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-list"></span><span class="mtext">Rapports</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<!--menu-->
+
 <div class="mobile-menu-overlay"></div>
 
 
@@ -246,7 +161,7 @@
                     <table class="data-table table stripe hover nowrap">
                         <thead>
                         <tr>
-                            <th class="table-plus datatable-nosort">#</th>
+<!--                            <th class="table-plus datatable-nosort">#</th>-->
                             <th>Designation</th>
                             <th>Quantite</th>
                             <th>Prix</th>
@@ -257,7 +172,7 @@
                         <tbody>
                         <th:block th:each="prod : ${listproduit}">
                             <tr>
-                                <td class="table-plus">[[${prod.id}]]</td>
+<!--                                <td class="table-plus">[[${prod.id}]]</td>-->
                                 <td>[[${prod.designation}]]</td>
                                 <td>[[${prod.quantite}]]</td>
                                 <td>[[${prod.prix}]]</td>
@@ -268,8 +183,8 @@
                                             <i class="dw dw-more"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                                            <a class="dropdown-item" th:href="${'/produit/edit/'+${prod.id}}"><i class="dw dw-edit2"></i> Edit</a>
-                                            <a class="dropdown-item" onclick= "return (confirm(' Voulez-vous supprimer vraiment cette information ?'));" th:href="${'/produit/delete/'+${prod.id}}"><i class="dw dw-delete-3"></i> Delete</a>
+                                            <a class="dropdown-item" th:href="@{'/produit/edit/'+${prod.id}}"><i class="dw dw-edit2"></i> Edit</a>
+                                            <a class="dropdown-item" onclick= "return (confirm(' Voulez-vous supprimer vraiment cette information ?'));" th:href="@{'/produit/delete/'+${prod.id}}"><i class="dw dw-delete-3"></i> Delete</a>
                                         </div>
                                     </div>
                                 </td>

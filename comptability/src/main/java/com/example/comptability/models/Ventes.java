@@ -42,11 +42,11 @@ public class Ventes {
         this.prix = prix;
     }
 
-    public Date getDatevente() {
+    public String getDatevente() {
         return datevente;
     }
 
-    public void setDatevente(Date datevente) {
+    public void setDatevente(String datevente) {
         this.datevente = datevente;
     }
     @Column(nullable = false, length = 300 , name = "refproduit")
@@ -56,5 +56,5 @@ public class Ventes {
     @Column(nullable = false, length = 300 , name = "prix")
     private Double prix;
     @Column(nullable = false, length = 300 , name = "datevente")
-    private Date datevente;
+    private String datevente;
 }
